@@ -2,8 +2,6 @@
 
 ## （Chinese Guide)[NumPy_CNN：由NumPy实现的卷积神经网络中文介绍](https://github.com/EthanLifeGreat/NumPy_CNN/blob/main/README.CN.md)
 
-# 中文版介绍
-
 ## Preview
 NumPy_CNN contains CNN modules that is implemented in pure NumPy. Using these modules (defiend in Modules directory), in a PyTorch-like manner, we can easily build CNNs.
 
@@ -27,13 +25,13 @@ The two main files both first declared a CNN class, defining its network structu
 With similar way of defining the network, you can build your own network, including CNN and simple BP.
 
 
-### Modules 文件夹
+### Modules directory
 nn.py: Similar to torch.nn in PyTorch, nn.py defines network layers(convolution, linear), loss functions(MSE, CrossEntropy) and optimizers(Adam, RMSProp) classes, which will be used in defining networks.
 
 matrix_functions.py: is used to boost functions matmul() and einsum(), when you have installed torch. This is because NumPy often does not use multi-kernel to compute matrix multiply. However, without torch module, the program is still runnable.
 
 
-### utils 文件夹
-mnist.py is used to read MNIST dataset in directory data. The code is not written by us, and we want to thank the original author.
+### utils directory
+mnist.py is used to read MNIST dataset in directory data. The code is not written by me, and I'd like to thank the original author.
 
 one_hot.py is used to encode one hot for labels.
