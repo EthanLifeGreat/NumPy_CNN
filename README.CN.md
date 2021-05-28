@@ -19,12 +19,15 @@ NumPy_CNN 是仅使用NumPy包实现的CNN模块。使用这些（定义在Modul
 ## 文件介绍
 ### main文件
 两个main文件都首先声明了一个CNN类，并定义了它的网络结构，损失函数和优化器。然后进行训练和测试。
+
 按照类似的定义方式，你可以声明自己的神经网络，包括CNN或者简单的BP网络。
 
 ### Modules 文件夹
 nn.py 仿照 PyTorch.nn 类，定义了不同的神经网络层（卷积层、线性层），损失函数（MSE、Cross Entropy）和优化器（Adam、RMSProp）的类。在定义网络结构的时候需要用到它们。
+
 matrix_functions.py 是对矩阵函数matmul和einsum进行加速的，在你安装了torch包时，它将极大地加速计算。这是因为通常NumPy不支持CPU的矩阵并行计算，而torch则支持。而即使没有安装torch包，程序仍然可以正确运行。
 
 ### utils 文件夹
 mnist.py 用于对data文件夹中的MNIST数据集进行读取。并非本人所写，感谢原作者的贡献。
+
 one_hot.py 用于对标签进行one hot编码。
