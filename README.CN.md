@@ -3,6 +3,9 @@
 ## 简介 
 NumPy_CNN 是仅使用NumPy包实现的CNN模块。使用这些（定义在Modules文件夹中的）模块，按照类似PyTorch的定义方式，我们可以轻松搭建卷积神经网络进行计算。
 
+## 意义
+本项目的意义在于展示出简明的Python代码，最终展示出CNN的原理。（在我理解中的原理）。
+
 ## 展示模块
 打开 mnist_cnn-final_test.md 可以看到调用这些模块的代码格式和运行结果，可以达到99.33%的测试集精度。
 
@@ -20,7 +23,7 @@ NumPy_CNN 是仅使用NumPy包实现的CNN模块。使用这些（定义在Modul
 
 ### Modules 文件夹
 nn.py 仿照 PyTorch.nn 类，定义了不同的神经网络层（卷积层、线性层），损失函数（MSE、Cross Entropy）和优化器（Adam、RMSProp）的类。在定义网络结构的时候需要用到它们。
-matrix_functions.py 是对矩阵函数matmul和eisum进行加速的，在你安装了torch包时，它将极大地加速计算。这是因为通常NumPy不支持CPU的矩阵并行计算，而torch则支持。而即使没有安装torch包，程序仍然可以正确运行。
+matrix_functions.py 是对矩阵函数matmul和einsum进行加速的，在你安装了torch包时，它将极大地加速计算。这是因为通常NumPy不支持CPU的矩阵并行计算，而torch则支持。而即使没有安装torch包，程序仍然可以正确运行。
 
 ### utils 文件夹
 mnist.py 用于对data文件夹中的MNIST数据集进行读取。并非本人所写，感谢原作者的贡献。
